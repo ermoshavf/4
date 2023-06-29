@@ -1,0 +1,16 @@
+nibid tx staking create-validator \
+ --amount=1000000unibi \
+ --pubkey=$(nibid tendermint show-validator) \
+ --moniker=$NIBIRU_NODENAME \
+ --chain-id=$NIBIRU_CHAIN \
+ --commission-rate=0.1 \
+ --commission-max-rate=0.2 \
+ --commission-max-change-rate=0.01 \
+ --min-self-delegation=100000 \
+ --gas-prices 0.1unibi \
+ --gas-adjustment 1.5 \
+ --gas auto \
+ --from=$NIBIRU_NODENAME \
+ --identity="64bit_key_from_keybase" \
+ --details="Details of your validator" \
+ --website="https://web.site"
